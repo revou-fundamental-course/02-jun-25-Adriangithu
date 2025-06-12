@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // =========================================
-    // A. Banner Slideshow
-    // =========================================
+    
     let slideIndex = 0;
     const slidesContainer = document.querySelector('.slides-container');
     const images = slidesContainer.querySelectorAll('img');
@@ -17,20 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
     }
 
-    // Global function for onclick events (exposed to HTML)
+    
     window.plusSlides = function(n) {
         showSlides(n);
     };
 
-    // Optional: Auto slideshow
-    // setInterval(() => {
-    //     plusSlides(1);
-    // }, 5000); // Ganti gambar setiap 5 detik
 
 
-    // =========================================
-    // B. Welcome Message (Dynamic with user input)
-    // =========================================
     const welcomeMessageElement = document.getElementById('welcomeMessage');
     const userNameInput = document.getElementById('userNameInput');
     const setUserNameBtn = document.getElementById('setUserNameBtn');
@@ -42,18 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
     setUserNameBtn.addEventListener('click', () => {
         const userName = userNameInput.value.trim();
         updateWelcomeMessage(userName);
-     userNameInput.value = ''; // Clear input after setting
-        // Optional: hide the input container after name is set
-        // document.querySelector('.name-input-container').style.display = 'none';
+     userNameInput.value = ''; 
+       
     });
 
-    // Initialize welcome message
-    updateWelcomeMessage(''); // Default to "Hi User"
+    
+    updateWelcomeMessage(''); 
 
 
-    // =========================================
-    // C. Update Current Time
-    // =========================================
+  
     function updateCurrentTime() {
         const currentTimeElement = document.getElementById('currentTime');
         const now = new Date();
@@ -66,17 +54,15 @@ document.addEventListener('DOMContentLoaded', () => {
             minute: '2-digit',
             second: '2-digit',
             timeZoneName: 'short',
-            hour12: false // Use 24-hour format
+            hour12: false 
         };
         currentTimeElement.textContent = now.toLocaleDateString('en-US', options);
     }
     updateCurrentTime();
-    setInterval(updateCurrentTime, 1000); // Update every second
+    setInterval(updateCurrentTime, 1000); 
 
 
-    // =========================================
-    // D. Message Form Handling
-    // =========================================
+    
     const messageForm = document.getElementById('messageForm');
     const displayNama = document.getElementById('displayNama');
     const displayTanggalLahir = document.getElementById('displayTanggalLahir');
@@ -84,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
  const displayPesan = document.getElementById('displayPesan');
 
     messageForm.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent form from refreshing the page
+        event.preventDefault(); 
 
         const name = document.getElementById('name').value;
         const dob = document.getElementById('dob').value;
@@ -97,29 +83,27 @@ document.addEventListener('DOMContentLoaded', () => {
         displayJenisKelamin.textContent = gender;
         displayPesan.textContent = message || 'N/A';
 
-        // Optional: Reset form after submit
+        
         messageForm.reset();
     });
 
-    // =========================================
-    // E. Smooth Scroll for Navigation Links
-    // =========================================
+   
     document.querySelectorAll('.navbar a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault(); // Prevent default jump
+            e.preventDefault(); 
 
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-                // Calculate offset for sticky header
+                
                 const headerOffset = document.querySelector('.navbar').offsetHeight;
                 const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset - 20; // -20 for extra padding
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset - 20; 
 
                 window.scrollTo({
                     top: offsetPosition,
-                    behavior: "smooth" // Smooth scrolling
+                    behavior: "smooth" 
                 });
             }
         });
