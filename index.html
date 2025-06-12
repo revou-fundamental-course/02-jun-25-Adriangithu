@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Website Logo">
+            <span>My Website</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profile">About Me</a></li>
+                <li><a href="#message-us">Message Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="banner-slideshow">
+            <div class="slides-container">
+                <img src="Slideshow 1.png" alt="Slideshow 1" class="slide active">
+                <img src="Slideshow 2.png" alt="Slideshow 2" class="slide">
+                <img src="Slideshow 3.png" alt="Slideshow 3" class="slide">
+            </div>
+            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+            <button class="next" onclick="plusSlides(1)">&#10095;</button>
+        </section>
+
+        <section id="profile" class="about-me-section content-section">
+            <h1 id="welcomeMessage">Hi User, Welcome To My Portfolio</h1>
+            <p class="intro-text">Ini adalah website pribadi dan kegiatan saya ada disini. Mari berkenalan dengan saya lebih jauh!!!.</p>
+
+            <div class="name-input-container">
+                <input type="text" id="userNameInput" placeholder="Masukkan nama Anda">
+                <button id="setUserNameBtn">Set Nama</button>
+            </div>
+
+            <div class="about-me-subsection">
+                <h2>Tentang Saya</h2>
+                <div class="bio-content">
+                    <img src="DSC08636.JPG" alt="Foto Profil" class="profile-picture">
+                    <p>Halo, selamat datang teman-teman. Buat yang belum tahu nih, Aku Adrian Alfarisi Maulana, biasa dipanggil Adrian sebagai nama brandingku atau Aan untuk teman-temn yang ingin lebih dekatku. Aku lahir di Surabaya, 3 Agustus 2006. Yup, kalian tidak salah dengar, aku lahir di bulan Indonesia merdeka.</p>
+                    <p>Sekilas tentang aku, saat ini aku sedang menjadi seseorang mahasiswa setelah dinyatakan lulus lewat jalur UTBK-SNBT di UPN "Veteran" Jawa Timur, dengan Jurusan Sains Data.</p>
+                </div>
+            </div>
+
+            <div class="about-me-subsection">
+                <h2>Keterampilan</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">HTML</div>
+                    <div class="skill-item">CSS</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">PHP</div>
+                    <div class="skill-item">Python</div>
+                    <div class="skill-item">SQL</div>
+                    <div class="skill-item">Git</div>
+                
+                </div>
+            </div>
+
+        
+
+            <div class="about-me-subsection">
+                <h2>Minat & Hobi</h2>
+                <ul class="interests-list">
+                    <li>Paparazi</li>
+                    <li>Olahraga</li>
+                    <li>Mempelajari Seputar Dunia Teknologi</li>
+                    <li>Analis sepak bola</li>
+                    <li>Suka menjelajahi tempat</li>
+                </ul>
+            </div>
+
+            <div class="about-me-subsection contact-info-brief">
+                <h2>Hubungi Saya</h2>
+                <p>Email: <a href="https://adrianaan0306@gmail.com">adrianaan0306@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/adrian-alfarisi-maulana-" target="_blank">linkedin.com/in/adrian-alfarisi-maulana-</a></p>
+            </div>
+
+        </section>
+
+        
+
+        <section id="message-us" class="message-us content-section">
+            <h2>Message Us</h2>
+            <div class="message-content">
+                <form id="messageForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Tanggal Lahir</label>
+                        <input type="date" id="dob">
+                    </div>
+                    <div class="form-group">
+                        <label>Jenis Kelamin</label>
+                        <div class="radio-group">
+                            <input type="radio" id="lakiLaki" name="gender" value="Laki-Laki">
+                            <label for="lakiLaki">Laki-Laki</label>
+                            <input type="radio" id="perempuan" name="gender" value="Perempuan">
+                            <label for="perempuan">Perempuan</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" placeholder="Pesan"></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+                <div class="user-info">
+                    <p>Current time: <span id="currentTime"></span></p>
+                    <p>Nama: <span id="displayNama">-</span></p>
+                    <p>Tanggal Lahir: <span id="displayTanggalLahir">-</span></p>
+                    <p>Jenis Kelamin: <span id="displayJenisKelamin">-</span></p>
+                    <p>Pesan: <span id="displayPesan">(Tergantung pesan yang dikirim)</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>@copyright by Adrian 2025</p>
+    </footer>
+
+    <script src="otak.js"></script>
+</body>
+</html>
