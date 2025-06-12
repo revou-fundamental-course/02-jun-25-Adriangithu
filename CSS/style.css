@@ -1,25 +1,23 @@
-/* ========================================= */
-/* Global & Futuristic Background            */
-/* ========================================= */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Futuristik Background (Dark, Powerful & Subtle Pattern) */
+    
     background: linear-gradient(to bottom, #0A0A0A, #1A1A1A);
     background-image:
-        radial-gradient(circle at top left, rgba(0, 255, 255, 0.07) 0%, transparent 50%), /* Neon Cyan glow */
-        radial-gradient(circle at bottom right, rgba(255, 0, 255, 0.07) 0%, transparent 50%), /* Neon Magenta glow */
-        linear-gradient(45deg, rgba(255, 255, 255, 0.03) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.03) 50%, rgba(255, 255, 255, 0.03) 75%, transparent 75%, transparent); /* Subtle grid pattern */
+        radial-gradient(circle at top left, rgba(0, 255, 255, 0.07) 0%, transparent 50%), 
+        radial-gradient(circle at bottom right, rgba(255, 0, 255, 0.07) 0%, transparent 50%), 
+        linear-gradient(45deg, rgba(255, 255, 255, 0.03) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.03) 50%, rgba(255, 255, 255, 0.03) 75%, transparent 75%, transparent); 
     background-size: 800px 800px, 800px 800px, 40px 40px;
     background-position: top left, bottom right, 0 0;
-    background-attachment: fixed; /* Agar background tidak ikut scroll */
-    color: #E0E0E0; /* Warna teks default terang */
+    background-attachment: fixed; 
+    color: #E0E0E0; 
     min-height: 100vh;
 }
 
-/* Scrollbar Styling (Futuristic) */
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -27,28 +25,25 @@ body {
     background: #222;
 }
 ::-webkit-scrollbar-thumb {
-    background: #00FFFF; /* Warna neon */
+    background: #00FFFF; 
     border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #FF00FF; /* Warna neon lain saat hover */
+    background: #FF00FF; 
 }
 
 
-/* ========================================= */
-/* Navbar                                    */
-/* ========================================= */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(10, 10, 10, 0.85); /* Agak transparan, lebih gelap */
+    background-color: rgba(10, 10, 10, 0.85); 
     padding: 10px 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow lebih kuat */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
     position: sticky;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(8px); /* Efek blur lebih kuat */
+    backdrop-filter: blur(8px); 
     -webkit-backdrop-filter: blur(8px);
 }
 
@@ -67,7 +62,7 @@ body {
     font-weight: bold;
     font-size: 1.5em;
     color: #80FFFF;
-    text-shadow: 0 0 10px #00FFFF; /* Efek cahaya lebih kuat */
+    text-shadow: 0 0 10px #00FFFF; 
 }
 
 .navbar nav ul {
@@ -97,9 +92,7 @@ body {
 }
 
 
-/* ========================================= */
-/* Main Content Sections                     */
-/* ========================================= */
+
 main {
     padding: 20px;
     max-width: 1366px;
@@ -107,19 +100,19 @@ main {
 }
 
 .content-section {
-    background-color: rgba(255, 255, 255, 0.08); /* Background transparan untuk konten */
-    border: 1px solid rgba(0, 255, 255, 0.3); /* Border neon lebih kuat */
+    background-color: rgba(255, 255, 255, 0.08); 
+    border: 1px solid rgba(0, 255, 255, 0.3); 
     border-radius: 10px;
     padding: 30px;
     margin-bottom: 30px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Shadow lebih kuat */
-    backdrop-filter: blur(5px); /* Efek blur lebih kuat */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(5px); 
     -webkit-backdrop-filter: blur(5px);
 }
 
 .content-section h1, .content-section h2 {
     color: #B026FF;
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6); /* Efek cahaya lebih kuat */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6); 
     margin-bottom: 20px;
     border-bottom: 2px solid rgba(0, 255, 255, 0.4);
     padding-bottom: 10px;
@@ -130,9 +123,7 @@ main {
     line-height: 1.6;
 }
 
-/* ========================================= */
-/* Banner Slideshow                          */
-/* ========================================= */
+
 .banner-slideshow {
     position: relative;
     width: 100%;
@@ -170,8 +161,8 @@ main {
     transition: 0.6s ease;
     border-radius: 5px;
     user-select: none;
-    background-color: rgba(0,0,0,0.6); /* Lebih gelap */
-    border: 1px solid rgba(0, 255, 255, 0.4); /* Border lebih kuat */
+    background-color: rgba(0,0,0,0.6); 
+    border: 1px solid rgba(0, 255, 255, 0.4); 
     z-index: 10;
 }
 
@@ -186,14 +177,12 @@ main {
 
 .banner-slideshow .prev:hover,
 .banner-slideshow .next:hover {
-    background-color: rgba(0,0,0,0.9); /* Lebih gelap saat hover */
+    background-color: rgba(0,0,0,0.9); 
     color: #FF00FF;
     border-color: rgba(255, 0, 255, 0.6);
 }
 
-/* ========================================= */
-/* About Me Section (Formerly Welcome)       */
-/* ========================================= */
+
 .about-me-section {
     text-align: center;
 }
@@ -220,12 +209,12 @@ main {
 }
 
 .name-input-container input[type="text"] {
-    padding: 12px 18px; /* Padding lebih besar */
+    padding: 12px 18px; 
     border: 1px solid #00FFFF;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.08); /* Lebih transparan */
+    background-color: rgba(255, 255, 255, 0.08); 
     color: #E0E0E0;
-    font-size: 1.1em; /* Ukuran font lebih besar */
+    font-size: 1.1em; 
     width: 60%;
     max-width: 300px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
@@ -234,12 +223,12 @@ main {
 .name-input-container input[type="text"]:focus {
     outline: none;
     border-color: #FF00FF;
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6); /* Shadow lebih kuat */
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6); 
     background-color: rgba(255, 255, 255, 0.12);
 }
 
 .name-input-container button {
-    padding: 12px 25px; /* Padding lebih besar */
+    padding: 12px 25px; 
     background: linear-gradient(45deg, #00FFFF, #FF00FF);
     color: #FFFFFF;
     border: none;
@@ -251,11 +240,11 @@ main {
 }
 
 .name-input-container button:hover {
-    transform: translateY(-3px); /* Efek hover lebih kentara */
-    box-shadow: 0 6px 18px rgba(0, 255, 255, 0.4); /* Shadow lebih kuat */
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 18px rgba(0, 255, 255, 0.4); 
 }
 
-/* New: Styling for About Me Subsections */
+
 .about-me-subsection {
     background-color: rgba(0, 255, 255, 0.05);
     border: 1px solid rgba(0, 255, 255, 0.2);
@@ -264,7 +253,7 @@ main {
     margin: 30px auto;
     max-width: 900px;
     text-align: left;
-    box-shadow: inset 0 0 12px rgba(0, 255, 255, 0.15); /* Inset shadow lebih kuat */
+    box-shadow: inset 0 0 12px rgba(0, 255, 255, 0.15); 
     transition: box-shadow 0.3s ease;
 }
 
@@ -287,7 +276,7 @@ main {
     line-height: 1.8;
 }
 
-/* Bio Content Specific */
+
 .bio-content {
     display: flex;
     flex-direction: column;
@@ -301,11 +290,11 @@ main {
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid #FF00FF;
-    box-shadow: 0 0 18px rgba(255, 0, 255, 0.7); /* Shadow lebih kuat */
+    box-shadow: 0 0 18px rgba(255, 0, 255, 0.7); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .bio-content .profile-picture:hover {
-    transform: scale(1.08); /* Efek hover lebih kentara */
+    transform: scale(1.08); 
     box-shadow: 0 0 25px rgba(255, 0, 255, 0.9);
 }
 
@@ -319,20 +308,20 @@ main {
 }
 
 
-/* Skills Grid */
+
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 18px; /* Jarak lebih besar */
+    gap: 18px; 
     margin-top: 25px;
 }
 
 .skill-item {
-    background-color: rgba(0, 255, 255, 0.25); /* Lebih terang */
+    background-color: rgba(0, 255, 255, 0.25); 
     border: 1px solid #00FFFF;
     border-radius: 5px;
-    padding: 12px 18px; /* Padding lebih besar */
+    padding: 12px 18px; 
     color: #B0B0B0;
     font-weight: bold;
     font-size: 1em;
@@ -341,24 +330,24 @@ main {
 }
 
 .skill-item:hover {
-    background-color: rgba(255, 0, 255, 0.35); /* Lebih terang saat hover */
+    background-color: rgba(255, 0, 255, 0.35); 
     border-color: #FF00FF;
-    transform: translateY(-4px); /* Efek hover lebih kentara */
+    transform: translateY(-4px); 
     box-shadow: 0 6px 18px rgba(255, 0, 255, 0.4);
     text-shadow: 0 0 10px rgba(255, 0, 255, 0.9);
 }
 
-/* Timeline for Experience/Education */
+
 .timeline {
     position: relative;
     padding-left: 25px;
-    border-left: 2px solid rgba(0, 255, 255, 0.4); /* Garis lebih kuat */
+    border-left: 2px solid rgba(0, 255, 255, 0.4); 
     margin: 25px 0;
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 35px; /* Jarak lebih besar */
+    margin-bottom: 35px; 
     padding-left: 35px;
 }
 
@@ -366,12 +355,12 @@ main {
     position: absolute;
     left: -12px;
     top: 5px;
-    width: 18px; /* Ukuran dot lebih besar */
+    width: 18px; 
     height: 18px;
     background-color: #00FFFF;
-    border: 3px solid #00FFFF; /* Border lebih tebal */
+    border: 3px solid #00FFFF; 
     border-radius: 50%;
-    box-shadow: 0 0 12px rgba(0, 255, 255, 0.8); /* Shadow lebih kuat */
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.8); 
     transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
@@ -384,7 +373,7 @@ main {
 .timeline-content h3 {
     color: #80FFFF;
     margin-bottom: 5px;
-    font-size: 1.4em; /* Ukuran font lebih besar */
+    font-size: 1.4em; 
 }
 
 .timeline-content .company {
@@ -396,7 +385,7 @@ main {
     color: #B0B0B0;
     font-style: italic;
     font-size: 0.9em;
-    margin-bottom: 12px; /* Jarak lebih besar */
+    margin-bottom: 12px; 
 }
 
 .timeline-content ul {
@@ -407,8 +396,8 @@ main {
 
 .timeline-content ul li {
     position: relative;
-    padding-left: 25px; /* Padding lebih besar */
-    margin-bottom: 10px; /* Jarak lebih besar */
+    padding-left: 25px; 
+    margin-bottom: 10px; 
     color: #C0C0C0;
 }
 
@@ -418,10 +407,10 @@ main {
     position: absolute;
     left: 0;
     font-weight: bold;
-    font-size: 1.1em; /* Ukuran icon lebih besar */
+    font-size: 1.1em; 
 }
 
-/* Interests List */
+
 .interests-list {
     list-style: none;
     padding: 0;
@@ -433,7 +422,7 @@ main {
 }
 
 .interests-list li {
-    background-color: rgba(255, 0, 255, 0.15); /* Lebih terang */
+    background-color: rgba(255, 0, 255, 0.15); 
     border: 1px solid #FF00FF;
     border-radius: 5px;
     padding: 10px 15px;
@@ -449,7 +438,7 @@ main {
     box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
 }
 
-/* Contact Info Brief */
+
 .contact-info-brief p {
     margin-bottom: 10px;
     text-align: center;
@@ -468,9 +457,7 @@ main {
 
 
 
-/* ========================================= */
-/* Message Us                                */
-/* ========================================= */
+
 .message-us h2 {
     margin-bottom: 20px;
 }
@@ -611,9 +598,7 @@ main {
     text-shadow: 0 0 6px rgba(0, 255, 255, 0.4);
 }
 
-/* ========================================= */
-/* Footer                                    */
-/* ========================================= */
+
 footer {
     text-align: center;
     padding: 15px 20px;
@@ -622,13 +607,10 @@ footer {
     font-size: 0.9em;
     color: #A0A0A0;
     border-top: 1px solid rgba(0, 255, 255, 0.3);
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); /* Shadow ke atas */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); 
 }
 
 
-/* ========================================= */
-/* Responsive Design                         */
-/* ========================================= */
 
 @media (max-width: 768px) {
     .navbar {
@@ -647,9 +629,9 @@ footer {
 .navbar nav ul {
         flex-direction: column;
         width: 100%;
-        text-align: center; /* Memusatkan teks di dalam ul (parent) */
+        text-align: center; 
         padding: 0;
-        align-items: center; /* Memusatkan item li secara horizontal */
+        align-items: center; 
         justify-content: center;
     }
 
@@ -663,10 +645,10 @@ footer {
         padding: 8px 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         box-sizing: border-box;
-        text-align: center! important; /* BARU/PENTING: Memusatkan teks di dalam link itu sendiri */
+        text-align: center! important; 
     }
 
-    /* ... (kode lainnya tetap sama) ... */
+    
 }
 
     .navbar nav ul li:last-child a {
@@ -820,7 +802,7 @@ footer {
     }
 }
 
-/* Tablet Devices (769px - 1024px) */
+
 @media (min-width: 769px) and (max-width: 1024px) {
     main {
         padding: 15px;
